@@ -1,0 +1,88 @@
+.profile-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.profile-card {
+  background: rgba(38, 38, 38, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  padding: 36px 40px;
+  width: 100%;
+  max-width: 520px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.profile-greeting {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.account-badge {
+  display: inline-block;
+  background: linear-gradient(to right, #f07a1f, #f4e425);
+  color: #1a1a1a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.profile-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 24px;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.field-label {
+  color: #ffd166;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field-label i {
+  width: 16px;
+  text-align: center;
+}
+
+.field-value {
+  color: #f0f0f0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: right;
+}

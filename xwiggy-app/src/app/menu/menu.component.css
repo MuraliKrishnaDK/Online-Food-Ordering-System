@@ -1,0 +1,241 @@
+.body.menu-page {
+  color: #ffffff;
+  font: 14px Helvetica, sans-serif;
+  padding: 16px 22px 28px;
+}
+
+.menu-title {
+  margin: 10px 0 18px;
+  font-size: 2rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.hint {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.selected-category {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.bigbutton.back-btn {
+  width: 92px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background-color: #f4e425 !important;
+  color: #000000 !important;
+}
+
+.bigbutton.back-btn span {
+  color: #000000 !important;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Category detail header row: keep Back on the left, heading larger */
+.category-detail-toolbar {
+  position: relative;
+  justify-content: center;
+  min-height: 52px;
+}
+
+.category-detail-toolbar .selected-category {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.category-detail-toolbar .back-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toolbar-right-actions {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bigbutton.back-btn:hover {
+  background-color: #f8ee66 !important;
+}
+
+.card-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.categories-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.items-grid {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1200px) {
+  .items-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .items-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.menu-card {
+  background: rgba(38, 38, 38, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.category-card {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
+}
+
+.category-emoji {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.category-card h3,
+.item-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+}
+
+.category-card p,
+.item-card p {
+  margin: 0;
+  opacity: 0.92;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-image {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.price-counter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.item-card .price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffd166;
+}
+
+.qty-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.step-btn {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  min-width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.step-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.qty-value {
+  min-width: 28px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bigbutton {
+  border-radius: 999px;
+  background-color: #f4511e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px 14px;
+  min-width: 128px;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.bigbutton span {
+  display: inline-block;
+}
+
+.bigbutton span:after {
+  content: none !important;
+}
+
+.bigbutton:hover {
+  background-color: #d84315;
+}
+
+.total {
+  margin: 0 10px 0 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.inline-total {
+  white-space: nowrap;
+}

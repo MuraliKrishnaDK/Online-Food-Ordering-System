@@ -1,0 +1,29 @@
+<div class="profile-page">
+  <div class="profile-card">
+    <div class="profile-header">
+      <h2 class="profile-greeting">Welcome, {{modelUser.firstname}}</h2>
+      <span class="account-badge">User Account</span>
+    </div>
+
+    <div class="profile-divider"></div>
+
+    <div class="profile-fields">
+      <div class="profile-row">
+        <span class="field-label"><i class="fa fa-user"></i> First Name</span>
+        <span class="field-value">{{modelUser.firstname}}</span>
+      </div>
+      <div class="profile-row">
+        <span class="field-label"><i class="fa fa-user-circle"></i> Last Name</span>
+        <span class="field-value">{{modelUser.lastname}}</span>
+      </div>
+      <div class="profile-row">
+        <span class="field-label"><i class="fa fa-mobile"></i> Mobile Number</span>
+        <span class="field-value">{{modelUser.phone}}</span>
+      </div>
+      <div class="profile-row">
+        <span class="field-label"><i class="fa fa-envelope"></i> E-Mail ID</span>
+        <span class="field-value">{{modelUser.email}}</span>
+      </div>
+    </div>
+  </div>
+</div>

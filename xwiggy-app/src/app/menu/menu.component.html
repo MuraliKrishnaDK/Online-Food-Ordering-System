@@ -1,0 +1,44 @@
+<div class="body menu-page">
+  <h1 class="menu-title" align="center">Menu</h1>
+
+  <div class="menu-toolbar categories-toolbar" *ngIf="!selectedCategory">
+    <p class="hint">Pick a category to explore items</p>
+  </div>
+
+  <div class="menu-toolbar category-detail-toolbar" *ngIf="selectedCategory">
+    <button type="button" class="bigbutton back-btn" (click)="backToCategories()"><span>Back</span></button>
+    <h2 class="selected-category">{{selectedCategory.emoji}} {{selectedCategory.name}}</h2>
+    <div class="toolbar-right-actions">
+      <p class="total inline-total">Cart Total: ${{total.toFixed(2)}}</p>
+      <button routerLink="/checkout" class="bigbutton"><span>Checkout</span></button>
+    </div>
+  </div>
+
+  <div class="card-grid categories-grid" *ngIf="!selectedCategory">
+    <div class="menu-card category-card" *ngFor="let category of categories" (click)="selectCategory(category)">
+      <div class="category-emoji">{{category.emoji}}</div>
+      <h3>{{category.name}}</h3>
+      <p>{{category.items.length}} items</p>
+    </div>
+  </div>
+
+  <div class="card-grid items-grid" *ngIf="selectedCategory">
+    <div class="menu-card item-card" *ngFor="let item of selectedCategory.items; let itemIndex = index">
+      <h3>{{item.name}}</h3>
+      <img [src]="getItemImageUrl(item, selectedCategory?.name)"
+           [alt]="item.name"
+           class="item-image"
+           (error)="onItemImageError($event)">
+      <div class="price-counter-row">
+        <p class="price">{{item.priceText}}</p>
+        <div class="qty-stepper" aria-label="Quantity selector">
+          <button type="button" class="step-btn" (click)="decreaseItem(item, itemIndex)">-</button>
+          <span class="qty-value">{{getItemQuantity(item, itemIndex)}}</span>
+          <button type="button" class="step-btn" (click)="increaseItem(item, itemIndex)">+</button>
+        </div>
+      </div>
+      <button type="button" class="bigbutton add-btn" (click)="addToCart(item, itemIndex)"><span>Add to Cart</span></button>
+    </div>
+  </div>
+
+</div>

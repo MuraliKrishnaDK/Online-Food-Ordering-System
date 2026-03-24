@@ -1,0 +1,28 @@
+# Angular
+xwiggy-app/node_modules/
+xwiggy-app/dist/
+xwiggy-app/.angular/
+
+# Spring Boot / Maven
+xwiggy-back/target/
+xwiggy-back/.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*

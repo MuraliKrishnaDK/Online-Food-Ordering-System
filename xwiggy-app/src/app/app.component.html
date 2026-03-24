@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header *ngIf="showHeader" class="app-header">
+  <div class="header-content">
+    <a routerLink="/menu" class="logo">FoodDoor</a>
+    <nav class="header-nav">
+      <a routerLink="/menu" routerLinkActive="active">Menu</a>
+      <a routerLink="/checkout" class="cart-link" routerLinkActive="active">
+        <i class="fa fa-shopping-cart"></i>
+        <span class="cart-badge">{{cartCount}}</span>
+      </a>
+      <div class="user-menu-wrap">
+        <span class="user-link" aria-label="Account menu">
+          <i class="fa fa-user"></i>
+        </span>
+        <div class="user-dropdown">
+          <a *ngIf="!isMerchantUser" routerLink="/welcome" class="user-dropdown-item">Profile</a>
+          <a *ngIf="isMerchantUser" routerLink="/merchantWelcome" class="user-dropdown-item">Profile</a>
+          <a routerLink="/settings" class="user-dropdown-item">Settings</a>
+          <button type="button" class="user-dropdown-item user-dropdown-logout" (click)="logout()">Logout</button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>
+<footer class="app-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4 class="footer-heading">Contact us</h4>
+      <ul class="footer-links">
+        <li><a routerLink="/contactUs">Help & Support</a></li>
+        <li><a href="#">Partner With Us</a></li>
+        <li><a href="#">Ride With Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4 class="footer-heading">Legal</h4>
+      <ul class="footer-links">
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

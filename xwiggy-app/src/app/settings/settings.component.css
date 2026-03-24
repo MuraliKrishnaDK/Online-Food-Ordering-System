@@ -1,0 +1,18 @@
+.settings-page {
+  min-height: 60vh;
+}
+
+.settings-card {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #2d2d2d;
+  border-radius: 8px;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.muted {
+  color: #888;
+  font-size: 0.9rem;
+}

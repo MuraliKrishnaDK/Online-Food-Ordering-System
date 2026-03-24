@@ -1,0 +1,80 @@
+<div class="body checkout-page">
+  <h1 class="checkout-title">Checkout</h1>
+
+  <div class="checkout-layout">
+    <section class="orders-panel">
+      <h2 class="orders-title">Your Orders</h2>
+
+      <div class="orders-header-row">
+        <span>Item</span>
+        <span>Qty</span>
+        <span>Total</span>
+      </div>
+
+      <div class="order-row" *ngFor="let order of lineItems">
+        <span class="order-name">{{order.name}}</span>
+        <span class="order-qty">
+          <button type="button" class="qty-btn" (click)="decreaseQuantity(order)">-</button>
+          <span class="qty-value">{{order.quantity}}</span>
+          <button type="button" class="qty-btn" (click)="increaseQuantity(order)">+</button>
+        </span>
+        <span class="order-total">${{order.lineTotal.toFixed(2)}}</span>
+      </div>
+
+      <div class="grand-total-row">
+        <span class="grand-label">Grand Total</span>
+        <span class="grand-value">${{grandTotal.toFixed(2)}}</span>
+      </div>
+    </section>
+
+    <section class="payment-panel">
+      <h2 class="payment-title">Payment Details</h2>
+      <div class="payment-form-wrap">
+        <table class="payment-table">
+          <tr>
+            <td><label>Card Number</label></td>
+            <td><input type="text" placeholder="xxxx xxxx xxxx xxxx"
+                        minlength="16"
+                        maxlength="16"
+                        [(ngModel)]="cardNumber"
+                        required="required"
+                        (keyup)="validCard()">
+            </td>
+          </tr>
+          <tr>
+            <td><label>Expiry</label></td>
+            <td>
+              <table>
+                <tr>
+                  <td style="min-width: 90px"><input type="number" placeholder="MM" min="1" max="12" required="required" [(ngModel)]="month" (keyup)="validMonth()"></td>
+                  <td style="min-width: 90px"><input type="number" placeholder="YY" min="19" max="99" required="required" [(ngModel)]="year" (keyup)="validYear()"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td><label>CVV</label></td>
+            <td>
+              <table>
+                <tr>
+                  <td style="min-width: 90px"><input type="number" placeholder="CVV" min="100" max="999" required="required" [(ngModel)]="cvv" (keyup)="validCvv()"></td>
+                  <td><img class="question" src="http://pngimg.com/uploads/question_mark/question_mark_PNG49.png"
+                           data-toggle="tooltip" data-placement="right" title="Card CVV Help"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Cardholder Name</label></td>
+            <td><input type="text" placeholder="Name" required="required" minlength="4" maxlength="10" [(ngModel)]="nameOnCard" (keyup)="validName()"></td>
+          </tr>
+        </table>
+        <div class="payment-actions">
+          <button class="bigbutton pay-btn" routerLink="/success" (click)="changeDB()"><span>Pay</span></button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+

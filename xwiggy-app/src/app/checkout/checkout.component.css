@@ -1,0 +1,279 @@
+.body {
+  background: transparent;
+  color: white;
+  font: 14px Helvetica, sans-serif;
+  padding: 24px 28px 36px;
+}
+
+.checkout-title {
+  margin: 8px 0 20px;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.checkout-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 26px;
+}
+
+.orders-panel,
+.payment-panel {
+  background: rgba(45, 45, 45, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.orders-panel {
+  flex: 1 1 50%;
+  padding: 20px 18px;
+}
+
+.orders-title {
+  margin: 0 0 14px;
+  color: #ffd166;
+  font-size: 1.8rem;
+  transform: rotate(-7deg);
+  transform-origin: left center;
+}
+
+.orders-header-row,
+.order-row,
+.grand-total-row {
+  display: grid;
+  grid-template-columns: 1fr 90px 120px;
+  gap: 10px;
+  align-items: center;
+}
+
+.orders-header-row {
+  font-weight: 700;
+  color: #ffcf7a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+}
+
+.orders-header-row span:nth-child(2),
+.orders-header-row span:nth-child(3) {
+  text-align: center;
+}
+
+.order-row {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.order-name {
+  color: #f2f2f2;
+  line-height: 1.25;
+}
+
+.order-qty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #ffffff;
+}
+
+.qty-value {
+  min-width: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  border: none;
+  background: #f4e425;
+  color: #111111;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.qty-btn:hover {
+  background: #fff06b;
+}
+
+.order-total {
+  text-align: right;
+  font-weight: 700;
+  color: #ffd166;
+}
+
+.grand-total-row {
+  margin-top: 12px;
+  padding-top: 8px;
+}
+
+.grand-label {
+  grid-column: 2;
+  text-align: center;
+  font-weight: 700;
+}
+
+.grand-value {
+  text-align: right;
+  font-weight: 800;
+  color: #f4e425;
+}
+
+.payment-panel {
+  flex: 1 1 50%;
+  padding: 20px 18px;
+}
+
+.payment-title,
+.pay-amount {
+  text-align: center;
+  margin-top: 0;
+}
+
+.pay-amount {
+  margin-bottom: 14px;
+}
+
+.payment-form-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-table {
+  margin: 0 auto;
+}
+
+.payment-actions {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+label {
+  font: bold 20px Helvetica, sans-serif;
+  display: block;
+  float: left;
+  text-align: right;
+  padding: 5px 10px 0 0;
+  width: 140px;
+}
+
+form div {
+  overflow: hidden;
+  margin: 0 0 5px 0;
+}
+
+
+.bigbutton {
+  border-radius: 10px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 125px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.bigbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bigbutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bigbutton:hover span {
+  padding-right: 25px;
+}
+
+.bigbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.pay-btn {
+  border-radius: 999px;
+  padding: 12px 28px;
+  min-width: 140px;
+  width: auto;
+  transition: background-color 0.25s ease;
+}
+
+.pay-btn span:after {
+  content: none !important;
+}
+
+.pay-btn:hover {
+  background-color: #d84315;
+}
+
+.pay-btn:hover span {
+  padding-right: 0;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.question{
+  width: auto;
+  height: 20px;
+}
+
+.blue{
+  border: 2px solid blue;
+  border-radius: 4px;
+}
+.red{
+   border: 2px solid red;
+   border-radius: 4px;
+ }
+
+@media (max-width: 980px) {
+  .checkout-layout {
+    flex-direction: column;
+  }
+
+  .orders-panel,
+  .payment-panel {
+    width: 100%;
+  }
+}
+
+
