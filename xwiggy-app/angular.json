@@ -20,6 +20,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
+              "src/favicon.svg",
               "src/favicon.png",
               "src/assets"
             ],
@@ -80,6 +81,7 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
+              "src/favicon.svg",
               "src/favicon.png",
               "src/assets"
             ],
