@@ -1,13 +1,11 @@
 [build]
-  base    = "xwiggy-app"
-  command = "npm install --legacy-peer-deps && npm run build -- --prod"
+  command = "cd xwiggy-app && npm install --legacy-peer-deps && npm run build -- --prod"
   publish = "xwiggy-app/dist/xwiggy-app"
 
 [build.environment]
   NODE_VERSION = "16"
   NODE_OPTIONS = "--openssl-legacy-provider"
 
-# SPA fallback — all routes serve index.html so Angular router works
 [[redirects]]
   from   = "/*"
   to     = "/index.html"
